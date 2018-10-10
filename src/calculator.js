@@ -12,6 +12,9 @@ function add(number) {
   	}
   	//if there is only one number
   	else
+  		if(number.includes('-')){
+			throw new Error("Negatives not allowd: " + number);
+		}
   		return parseInt(number);
 };
 

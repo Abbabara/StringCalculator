@@ -30,17 +30,9 @@ it("should return the sum of the numbers, with a new line inbetween too", () => 
 	expect(add("1\n2,3")).toBe(6);
 });
 
-
-
-/*
-test("should return an error, \" x is not a number!\" only checking one input"), () => {
-	function addtest() {
-		add('k');
+test("should throw an error", () => {
+	function negativetest() {
+		add("-1");
 	}
-	 expect((addtest).toThrowError
-	}
-    drinkFlavor('octopus');
-  }).toThrow();
-	
-	expect(add("g")).toBe("g is not a number!")
-}*/
+	 expect(negativetest).toThrowError("Negatives not allowd: -1");
+});
