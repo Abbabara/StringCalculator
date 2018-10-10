@@ -2,11 +2,18 @@ function add(number) {
   	if(number == "") {
   		return 0;
   	}
-  	if(number.includes(",")) {
+  	else if(number.includes(",")) {
   		var numberarray = number.split(",")
-  		return parseInt(numberarray[0]) + parseInt(numberarray[1]);
+  		var total = 0;
+  		for(i = 0; i < numberarray.length ; i++) {
+  			total += parseInt(numberarray[i]);
+  		}
+  		return total;
   	}
-  	return parseInt(number);
+  	else {
+  		return parseInt(number);
+  	}
+  	
 
 };
 
