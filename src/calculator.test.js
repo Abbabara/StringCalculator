@@ -54,3 +54,25 @@ test("should throw an error", () => {
 it("should return the sum of the numbers, but not numbers over 1000", () => {
 	expect(add("1001")).toBe(0);
 });
+
+it("should return the sum of the numbers, but not numbers over 1000", () => {
+	expect(add("1,1001,3")).toBe(4);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

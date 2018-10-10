@@ -29,9 +29,10 @@ function sum(numberarray){
    	//go through every number in the array, and adds it up
 	for(i = 0; i < numberarray.length ; i++) {
 		//if the number is negative, we add it to the temp
-		if(numberarray[i].includes("-")) {
+		if(numberarray[i].includes("-"))
 			temp += numberarray[i] + ",";
-		}
+		if(parseInt(numberarray[i]) > 1000)
+			numberarray[i] = 0;
 		total += parseInt(numberarray[i]);
 	}
 	//if any numbers were negative, error is thrown.
