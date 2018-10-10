@@ -15,6 +15,7 @@ function add(number) {
   		//if the number is negative
   		if(number.includes('-'))
 			throw new Error("Negatives not allowed: " + number);
+		//if the number is over 1000
 		else if(parseInt(number) > 1000) 
 			return 0;
 		else
