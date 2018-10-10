@@ -1,14 +1,21 @@
+//add implemented
 function add(number) {
+	//first, if the string is empty
   	if(number == "") 
   		return 0;
+  	//if the numbers or 2 or higher
   	else if(number.includes(",")) {
+  		//make an array with all the numbers, splitting it by ",".
   		var numberarray = number.split(",")
+  		//calling the sum function.
   		return sum(numberarray);
   	}
+  	//if there is only one number
   	else
   		return parseInt(number);
 };
 
+//sum function adds all the numbers.
 function sum(numberarray){
    	var total = 0;
 	for(i = 0; i < numberarray.length ; i++) {
