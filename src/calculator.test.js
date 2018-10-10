@@ -43,3 +43,10 @@ test("should throw an error", () => {
 	}
 	 expect(negativetest).toThrowError("Negatives not allowd: -1");
 });
+
+test("should throw an error", () => {
+	function negativetest() {
+		add("-1,4,-4");
+	}
+	 expect(negativetest).toThrowError("Negatives not allowd: -1,-4");
+});

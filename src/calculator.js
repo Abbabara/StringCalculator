@@ -14,7 +14,7 @@ function add(number) {
   	else
   		//if the number is negative
   		if(number.includes('-')){
-			throw new Error("Negatives not allowd: " + number);
+			throw new Error("Negatives not allowed: " + number);
 		}
   		return parseInt(number);
 };
@@ -30,7 +30,7 @@ function sum(numberarray){
 		total += parseInt(numberarray[i]);
 	}
 	if(temp!= "") {
-		throw new Error("Negatives not allowd: " + temp);
+		throw new Error("Negatives not allowed: " + temp);
 	}
 	return total;
 }
