@@ -23,6 +23,10 @@ it("should return sumerize multiple numbers", () => {
 });
 
 it("should return the sum of the numbers, with a new line inbetween too", () => {
+	expect(add("1\n2")).toBe(3);
+});
+
+it("should return the sum of the numbers, with a new line inbetween too", () => {
 	expect(add("1\n2,3")).toBe(6);
 });
 

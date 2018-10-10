@@ -5,7 +5,7 @@ function add(number) {
   		return 0;
   	//if the numbers or 2 or higher
   	else if(number.includes(",") || number.includes("\n")) {
-  		//make an array with all the numbers, splitting it by ",".
+  		//make an array with all the numbers, splitting it by "," or by "\n".
   		var numberarray = number.split(/,|\n/g)
   		//calling the sum function.
   		return sum(numberarray);
