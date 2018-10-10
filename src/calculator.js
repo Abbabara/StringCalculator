@@ -31,12 +31,14 @@ function sum(numberarray){
 		//if the number is negative, we add it to the temp
 		if(numberarray[i].includes("-"))
 			temp += numberarray[i] + ",";
-		if(parseInt(numberarray[i]) > 1000)
+		//check if the number is over 1000, changing it to 0 if so
+		else if(parseInt(numberarray[i]) > 1000)
 			numberarray[i] = 0;
+		
 		total += parseInt(numberarray[i]);
 	}
 	//if any numbers were negative, error is thrown.
-	if(temp!= "") {
+	if(temp != "") {
 		throw new Error("Negatives not allowed: " + temp);
 	}
 	return total;
