@@ -1,20 +1,20 @@
 function add(number) {
-  	if(number == "") {
+  	if(number == "") 
   		return 0;
-  	}
   	else if(number.includes(",")) {
   		var numberarray = number.split(",")
-  		var total = 0;
-  		for(i = 0; i < numberarray.length ; i++) {
-  			total += parseInt(numberarray[i]);
-  		}
-  		return total;
+  		return sum(numberarray);
   	}
-  	else {
+  	else
   		return parseInt(number);
-  	}
-  	
-
 };
+
+function sum(numberarray){
+   	var total = 0;
+	for(i = 0; i < numberarray.length ; i++) {
+		total += parseInt(numberarray[i]);
+	}
+	return total;
+}
 
 module.exports = add;
