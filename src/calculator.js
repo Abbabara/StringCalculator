@@ -22,13 +22,16 @@ function add(number) {
 //sum function adds all the numbers.
 function sum(numberarray){
 	var temp = "";
-   	var total = 0;
+   	var total = 0; 
+   	//go through every number in the array, and adds it up
 	for(i = 0; i < numberarray.length ; i++) {
+		//if the number is negative, we add it to the temp
 		if(numberarray[i].includes("-")) {
 			temp += numberarray[i] + ",";
 		}
 		total += parseInt(numberarray[i]);
 	}
+	//if any numbers were negative, error is thrown.
 	if(temp!= "") {
 		throw new Error("Negatives not allowed: " + temp);
 	}
