@@ -13,10 +13,12 @@ function add(number) {
   	//if there is only one number
   	else
   		//if the number is negative
-  		if(number.includes('-')){
+  		if(number.includes('-'))
 			throw new Error("Negatives not allowed: " + number);
-		}
-  		return parseInt(number);
+		else if(parseInt(number) > 1000) 
+			return 0;
+		else
+  			return parseInt(number);
 };
 
 //sum function adds all the numbers.

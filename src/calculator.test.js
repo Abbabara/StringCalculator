@@ -50,3 +50,7 @@ test("should throw an error", () => {
 	}
 	 expect(negativetest).toThrowError("Negatives not allowed: -1,-4");
 });
+
+it("should return the sum of the numbers, but not numbers over 1000", () => {
+	expect(add("1001")).toBe(0);
+});
