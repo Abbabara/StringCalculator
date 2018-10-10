@@ -21,3 +21,22 @@ it("should return the sum of numbers when there are two numbers in the string", 
 it("should return sumerize multiple numbers", () => {
 	expect(add("1,2,3")).toBe(6);
 });
+
+it("should return the sum of the numbers, with a new line inbetween too", () => {
+	expect(add("1\n2,3")).toBe(6);
+});
+
+
+
+/*
+test("should return an error, \" x is not a number!\" only checking one input"), () => {
+	function addtest() {
+		add('k');
+	}
+	 expect((addtest).toThrowError
+	}
+    drinkFlavor('octopus');
+  }).toThrow();
+	
+	expect(add("g")).toBe("g is not a number!")
+}*/

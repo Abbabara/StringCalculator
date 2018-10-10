@@ -4,9 +4,9 @@ function add(number) {
   	if(number == "") 
   		return 0;
   	//if the numbers or 2 or higher
-  	else if(number.includes(",")) {
+  	else if(number.includes(",") || number.includes("\n")) {
   		//make an array with all the numbers, splitting it by ",".
-  		var numberarray = number.split(",")
+  		var numberarray = number.split(/,|\n/g)
   		//calling the sum function.
   		return sum(numberarray);
   	}
