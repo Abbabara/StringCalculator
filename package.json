@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Abbabara/StringCalculator/issues"
   },
-  "homepage": "https://github.com/Abbabara/StringCalculator#readme"
+  "homepage": "https://github.com/Abbabara/StringCalculator#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }
