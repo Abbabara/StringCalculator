@@ -63,7 +63,13 @@ it("should return the sum of the number, with another delimeter", () => {
 	expect(add("//;\n1")).toBe(1);
 });
 
+it("should return the sum of the number, with another delimeter", () => {
+	expect(add("//;\n1;3")).toBe(4);
+});
 
+it("should return the sum of the number, with another delimeter", () => {
+	expect(add("//;\n1;3,5")).toBe(9);
+});
 
 
 
