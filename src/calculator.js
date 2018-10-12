@@ -6,7 +6,12 @@ function add(number) {
   	//if the numbers or 2 or higher
   	var numberarray = [];
 
-  	if(number.includes(",") || number.includes("\n")) {
+  	if(number.charAt(0) == "/" && number.charAt(1) == "/") {
+			var delimeter = number.charAt(2);
+			var number = number.slice(4, number.length);
+			numberarray = number.split(delimeter).join(/[,\n]/);	
+	}
+  	else if(number.includes(",") || number.includes("\n")) {
   		
   		//make an array with all the numbers, splitting it by "," or by "\n".
   	
