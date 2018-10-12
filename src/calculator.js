@@ -3,36 +3,23 @@ function add(number) {
  
   	if(number == "") 
   		return 0;
+  	
   	//if the numbers or 2 or higher
   	var numberarray = [];
 
   	if(number.charAt(0) == "/" && number.charAt(1) == "/") {
-  			//the new delimeter
-			var delimeter = number.charAt(2);
-			//cutting the string, so it will become normal string
-			var number = number.slice(4, number.length);
-			// splitting the string into arrays
-			numberarray = number.split(delimeter).join(/[,\n]/);	
+  		//the new delimeter
+		var delimeter = number.charAt(2);
+		//cutting the string, so it will become normal string
+		var number = number.slice(4, number.length);
+		// splitting the string into arrays
+		numberarray = number.split(delimeter).join(/[,\n]/);	
 	}
-  	else if(number.includes(",") || number.includes("\n")) {
-  		
-  		//make an array with all the numbers, splitting it by "," or by "\n".
-  	
-  			var numberarray = number.split(/[,\n]/);
-  		//calling the sum function.
-  		
-  	}
-  	//if there is only one number
   	else {
-  		//if the number is negative
-  		if(parseInt(number) < 0)
-			throw new Error("Negatives not allowed: " + number);
-		//if the number is over 1000
-		else if(parseInt(number) > 1000) 
-			return 0;
-		else
-  			return parseInt(number);
+  		//make an array with all the numbers, splitting it by "," or by "\n".
+  			var numberarray = number.split(/[,\n]/);
   	}
+
   	var temparray = [];
 
   	temparray = overthousand(numberarray, temparray);
