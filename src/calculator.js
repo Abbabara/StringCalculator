@@ -7,8 +7,11 @@ function add(number) {
   	var numberarray = [];
 
   	if(number.charAt(0) == "/" && number.charAt(1) == "/") {
+  			//the new delimeter
 			var delimeter = number.charAt(2);
+			//cutting the string, so it will become normal string
 			var number = number.slice(4, number.length);
+			// splitting the string into arrays
 			numberarray = number.split(delimeter).join(/[,\n]/);	
 	}
   	else if(number.includes(",") || number.includes("\n")) {
