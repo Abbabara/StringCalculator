@@ -15,15 +15,17 @@ function add(number) {
 		// splitting the string into arrays
 		numberarray = number.split(delimeter).join(/[,\n]/);	
 	}
-  	else {
+  	else 
   		//make an array with all the numbers, splitting it by "," or by "\n".
   			var numberarray = number.split(/[,\n]/);
-  	}
-
+  	
+  	//temparray
   	var temparray = [];
 
-  	temparray = overthousand(numberarray, temparray);
+  	// taking out too large numbers
+  	temparray = overthousand(numberarray);
   	
+  	//if there is no negative numbers, we can return.
   	if(checkNegative(numberarray)) 
   		return sum(temparray);
 };
@@ -45,16 +47,17 @@ function sum(numberarray){
 	return total;
 }
 
-function overthousand(numberarray, valSize){
+function overthousand(numberarray){
+	var temp = [];
 	j = 0;
 	for(var i = 0; i < numberarray.length; i++) {
 		// Add all numbers less or equal than 1000 to an array
 		if(parseInt(numberarray[i]) <= 1000) {
-			valSize[j] = parseInt(numberarray[i]);
+			temp[j] = parseInt(numberarray[i]);
 			j++;
 		}
 	}
-	return valSize;
+	return temp;
 }
 
 function checkNegative(numberarray){
